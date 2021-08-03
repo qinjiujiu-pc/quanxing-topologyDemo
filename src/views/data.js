@@ -116,6 +116,7 @@ export const defalutMaterials = [{
         show: true,
         list: []
     },
+    //基本形状 120到486行
     {
         name: '基本形状',
         expand: true,
@@ -493,6 +494,7 @@ export const defalutMaterials = [{
             }
         ]
     },
+    //流程图 498到700行
     {
         name: '流程图',
         expand: true,
@@ -695,6 +697,7 @@ export const defalutMaterials = [{
             }
         ]
     },
+    //活动图 701到817行
     {
         name: '活动图',
         expand: true,
@@ -812,6 +815,7 @@ export const defalutMaterials = [{
             }
         ]
     },
+    //时序图和类图 819到956行
     {
         name: '时序图和类图',
         expand: true,
@@ -1236,3 +1240,48 @@ export const defalutMaterials = [{
 export const images = [{
     image: 'https://iconfont.alicdn.com/t/d2ffc78f-ce7a-4b02-94c9-7a2224bf8485.png'
 }];
+// 这是我自己添加的
+// 第一个节点
+// import { Point, Node, Direction } from '@topology/core';
+
+// export function flowDataAnchors({ node: Node }) {
+//     node.anchors.push(new Point(node.rect.x + node.rect.width / 14, node.rect.y + node.rect.height / 2, Direction.Left));
+//     node.anchors.push(new Point(node.rect.x + (node.rect.width * 4) / 7, node.rect.y, Direction.Up));
+//     node.anchors.push(
+//         new Point(node.rect.x + (node.rect.width * 13) / 14, node.rect.y + node.rect.height / 2, Direction.Right)
+//     );
+
+//     node.anchors.push(new Point(node.rect.x + (node.rect.width * 3) / 7, node.rect.ey, Direction.Bottom));
+// }
+
+// // 第二个节点
+// import { Rect } from '@topology/core';
+
+// export function flowDataIconRect({ node: Node }) {
+//     node.iconRect = new Rect(0, 0, 0, 0);
+// }
+
+// export function flowDataTextRect({ node: Node }) {
+//     node.textRect = new Rect(
+//         node.rect.x + node.rect.width / 7,
+//         node.rect.y,
+//         (node.rect.width * 5) / 7,
+//         node.rect.height
+//     );
+//     node.fullTextRect = node.textRect;
+// }
+// // 第三个节点
+
+// // import { Node } from '@topology/core'; 上面已经声明了就不需要重复了
+
+// export function flowData({ ctx: CanvasRenderingContext2D, node: Node }) {
+//     ctx.beginPath();
+//     const offsetX = node.rect.width / 7;
+//     ctx.moveTo(node.rect.x + offsetX, node.rect.y);
+//     ctx.lineTo(node.rect.ex, node.rect.y);
+//     ctx.lineTo(node.rect.x + node.rect.width - offsetX, node.rect.ey);
+//     ctx.lineTo(node.rect.x, node.rect.ey);
+//     ctx.closePath();
+//     (node.fillStyle || node.bkType) && ctx.fill();
+//     ctx.stroke();
+// }
